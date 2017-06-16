@@ -21,6 +21,7 @@ namespace Entrega3
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(property));
         }
+        public int gola;
         public int vida;
         public int mana;
         public List<Cartas> mano;
