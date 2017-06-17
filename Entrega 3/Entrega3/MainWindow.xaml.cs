@@ -80,7 +80,7 @@ namespace Entrega3
             List<Cartas> TableroJugador2 = new List<Cartas>();
             Jugador Jugador1 = new Jugador(0, 30, 0, Mano1, Mazo1, NombreJugador1, TableroJugador1, HeroeJugador1);
             Jugador Jugador2 = new Jugador(0, 30, 0, Mano2, Mazo2, NombreJugador2, TableroJugador2, HeroeJugador2);
-            Tablero tablero = new Tablero(Jugador1);
+            Tablero tablero = new Tablero(Jugador1, Jugador2);
             tablero.Show();
             this.Close();
         }

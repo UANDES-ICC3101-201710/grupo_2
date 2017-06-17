@@ -7,11 +7,14 @@
         mc:Ignorable="d"
         Title="Tablero" Height="800" Width="1280">
     <Grid>
-        <Label x:Name="NombreJugadorShow" x:FieldModifier="public" Content="" HorizontalAlignment="Left" Height="135" Margin="50,35,0,0" VerticalAlignment="Top" Width="360"/>
-        <Label Name="VidaJugador" HorizontalAlignment="Left" Height="95" Margin="1045,35,0,0" VerticalAlignment="Top" Width="190">
-            <Label Content="Label"/>
-        </Label>
-        <Button Content="Button" HorizontalAlignment="Left" Height="195" Margin="205,420,0,0" VerticalAlignment="Top" Width="495" Click="Button_Click"/>
+        <Label Visibility="Hidden" Name="NombreJugadorShow" HorizontalAlignment="Left" Height="135" Margin="50,35,0,0" VerticalAlignment="Top" Width="360" FontSize="36"/>
+        <Label Name="VidaJugador" Visibility="Hidden" HorizontalAlignment="Left" Height="100" Margin="985,30,0,0" VerticalAlignment="Top" Width="250" FontSize="20"/>
+        <Button Visibility="Visible" Content="Empezar" Name="BotonEmpezar" HorizontalAlignment="Left" Height="480" Margin="205,135,0,0" VerticalAlignment="Top" Width="870" Click="Button_Click" FontSize="108"/>
+        <Label Visibility="Hidden" Name ="VidaJugadorOponente" HorizontalAlignment="Left" Height="100" Margin="985,130,0,0" VerticalAlignment="Top" Width="250" FontSize="20"/>
+        <Label Visibility="Hidden" Name ="ManaTurnoLabel" HorizontalAlignment="Left" Height="105" Margin="625,30,0,0" VerticalAlignment="Top" Width="285" FontSize="20"/>
+        <Button Visibility="Hidden" Name="BotonPasarTurno1a2" Content="Terminar Turno" HorizontalAlignment="Left" Height="139" Margin="985,620,0,0" VerticalAlignment="Top" Width="287" FontSize="36" Click="Button_Click_1"/>
+        <Button Visibility="Hidden" Name="BotonPasarTurno2a1" Content="Termianr Turno" HorizontalAlignment="Left" Height="139" Margin="985,620,0,0" VerticalAlignment="Top" Width="287" FontSize="36" Click="BotonPasarTurno2a1_Click"/>
+
 
     </Grid>
 </Window>
