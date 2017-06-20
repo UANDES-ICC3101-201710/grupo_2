@@ -7,13 +7,24 @@
         mc:Ignorable="d"
         Title="Tablero" Height="800" Width="1280">
     <Grid>
-        <Label Visibility="Hidden" Name="NombreJugadorShow" HorizontalAlignment="Left" Height="135" Margin="50,35,0,0" VerticalAlignment="Top" Width="360" FontSize="36"/>
-        <Label Name="VidaJugador" Visibility="Hidden" HorizontalAlignment="Left" Height="100" Margin="985,30,0,0" VerticalAlignment="Top" Width="250" FontSize="20"/>
-        <Button Visibility="Visible" Content="Empezar" Name="BotonEmpezar" HorizontalAlignment="Left" Height="480" Margin="205,135,0,0" VerticalAlignment="Top" Width="870" Click="Button_Click" FontSize="108"/>
-        <Label Visibility="Hidden" Name ="VidaJugadorOponente" HorizontalAlignment="Left" Height="100" Margin="985,130,0,0" VerticalAlignment="Top" Width="250" FontSize="20"/>
-        <Label Visibility="Hidden" Name ="ManaTurnoLabel" HorizontalAlignment="Left" Height="105" Margin="625,30,0,0" VerticalAlignment="Top" Width="285" FontSize="20"/>
+        <Label Visibility="Hidden" Content="Probando" Name="NombreJugadorShow" HorizontalAlignment="Left" Height="100" Margin="50,35,0,0" VerticalAlignment="Top" Width="360" FontSize="36"/>
+        <Label Name="VidaJugador" Visibility="Hidden" Content="Probando" HorizontalAlignment="Left" Height="100" Margin="985,30,0,0" VerticalAlignment="Top" Width="250" FontSize="18"/>
+        <Button Visibility="Visible" Content="Tablero" Name="BotonEmpezar" HorizontalAlignment="Left" Height="480" Margin="205,135,0,0" VerticalAlignment="Top" Width="870" Click="Button_Click" FontSize="108"/>
+        <Label Visibility="Hidden" Content="Probando" Name ="VidaJugadorOponente" HorizontalAlignment="Left" Height="100" Margin="985,130,0,0" VerticalAlignment="Top" Width="250" FontSize="18"/>
+        <Label Visibility="Hidden" Content="Probando" Name ="ManaTurnoLabel" HorizontalAlignment="Left" Height="105" Margin="625,30,0,0" VerticalAlignment="Top" Width="285" FontSize="18"/>
         <Button Visibility="Hidden" Name="BotonPasarTurno1a2" Content="Terminar Turno" HorizontalAlignment="Left" Height="139" Margin="985,620,0,0" VerticalAlignment="Top" Width="287" FontSize="36" Click="Button_Click_1"/>
-        <Button Visibility="Hidden" Name="BotonPasarTurno2a1" Content="Termianr Turno" HorizontalAlignment="Left" Height="139" Margin="985,620,0,0" VerticalAlignment="Top" Width="287" FontSize="36" Click="BotonPasarTurno2a1_Click"/>
+        <Button Visibility="Hidden" Name="BotonPasarTurno2a1" Content="Terminar Turno" HorizontalAlignment="Left" Height="139" Margin="985,620,0,0" VerticalAlignment="Top" Width="287" FontSize="36" Click="BotonPasarTurno2a1_Click"/>
+        <Button Visibility="Hidden" Name="BotonPoder" Content="Usar Poder" HorizontalAlignment="Left" Height="85" Margin="10,170,0,0" FontSize="30" VerticalAlignment="Top" Width="230" Click="Button_Click_2"/>
+        <Button Visibility="Hidden" Name="BotonJugarCarta1" Content="Jugar Carta" HorizontalAlignment="Left" Height="85" Margin="330,170,0,0" FontSize="30" VerticalAlignment="Top" Width="230" Click="Button_Click_3"/>
+        <Button Visibility="Hidden" Name="BotonAtacar" Content="Atacar" HorizontalAlignment="Left" Height="85" Margin="640,170,0,0" FontSize="30" VerticalAlignment="Top" Width="230" Click="Button_Click_5"/>
+        <ListBox Visibility="Hidden" Name="ListMano"  HorizontalAlignment="Left" Height="384" Margin="10,375,0,0" VerticalAlignment="Top" Width="265" FontSize="36"/>
+        <Label Name="JuegoActual" Visibility="Hidden" Content="Tu juego actual" HorizontalAlignment="Left" Height="70" Margin="50,260,0,0" VerticalAlignment="Top" Width="545" FontSize="36" FontWeight="Bold"/>
+        <Label Name ="ManoActual" Visibility="Hidden" Content="Mano" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="55" Margin="10,315,0,0" VerticalAlignment="Top" Width="265" FontSize="36"/>
+        <Button Name="BotonJugarCarta2" Visibility="Hidden" Content="Jugar Carta" HorizontalAlignment="Left" Height="85" Margin="330,170,0,0" VerticalAlignment="Top" Width="230" Click="Button_Click_4" FontSize="30"/>
+        <Label Name="TableroLabel" Content="Tablero" Visibility="Hidden" HorizontalAlignment="Left" Height="55" Margin="330,315,0,0" VerticalAlignment="Top" Width="185" FontSize="36"/>
+        <Label Name ="TableroRivalLabel" Content="Tablero Rival" Visibility="Hidden" HorizontalAlignment="Left" Height="55" Margin="560,315,0,0" VerticalAlignment="Top" Width="230" FontSize="36"/>
+        <ListBox Name="TableroTablero" Visibility="Hidden" HorizontalAlignment="Left" Height="394" Margin="280,375,0,0" VerticalAlignment="Top" Width="280"/>
+        <ListBox Name="TableroRival" Visibility="Hidden" HorizontalAlignment="Left" Height="394" Margin="560,375,0,0" VerticalAlignment="Top" Width="280"/>
 
 
     </Grid>

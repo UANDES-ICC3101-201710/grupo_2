@@ -23,6 +23,10 @@ namespace Entrega3
     {
         List<Cartas> listaCartas = new List<Cartas>();
         public List<Jugador> listaJugadores = new List<Jugador>();
+        List<Cartas> listaCartasShaman = new List<Cartas>();
+        Cartas ReclutaManodePlata = new Entrega3.Cartas(0, 1, 1, "Recluta Mano de Plata");
+        Cartas pichon = new Cartas(0, 0, 10000000, "pichon");
+        Cartas dagger = new Cartas(0, 1, 2, "Dagger");
         Cartas wisp = new Cartas(0, 1, 1, "wisp");
         Cartas murlocRaider = new Cartas(1, 1, 2, "Murloc Raider");
         Cartas bloodfenRaptor = new Cartas(2, 3, 2, "Bloodfen Raptor");
@@ -78,8 +82,14 @@ namespace Entrega3
             List<Cartas> Mano2 = new List<Cartas>();
             List<Cartas> TableroJugador1 = new List<Cartas>();
             List<Cartas> TableroJugador2 = new List<Cartas>();
-            Jugador Jugador1 = new Jugador(0, 30, 0, Mano1, Mazo1, NombreJugador1, TableroJugador1, HeroeJugador1);
-            Jugador Jugador2 = new Jugador(0, 30, 0, Mano2, Mazo2, NombreJugador2, TableroJugador2, HeroeJugador2);
+            int damage1 = 0;
+            int damage2 = 0;
+            Jugador Jugador1 = new Jugador(0, 30, 0, Mano1, Mazo1, NombreJugador1, TableroJugador1, HeroeJugador1, damage1, pichon,0,0);
+            Jugador Jugador2 = new Jugador(0, 30, 0, Mano2, Mazo2, NombreJugador2, TableroJugador2, HeroeJugador2, damage2, pichon,0,0);
+            Random rmd = new Random();
+            int turno = rmd.Next(0, 2);
+            Cartas theCoin = new Cartas(0, 0, 0, "the coin");
+            Cartas.crearMano(Jugador1, Jugador2, turno, theCoin);
             Tablero tablero = new Tablero(Jugador1, Jugador2);
             tablero.Show();
             this.Close();

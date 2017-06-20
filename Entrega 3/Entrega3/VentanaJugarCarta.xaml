@@ -1,0 +1,21 @@
+﻿<Window x:Class="Entrega3.VentanaJugarCarta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Entrega3"
+        mc:Ignorable="d"
+        Title="VentanaJugarCarta" Height="800" Width="1280">
+    <Grid>
+        <Label Name="LabelMano" Content="Mano" Visibility="Hidden" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="75" Margin="10,40,0,0" VerticalAlignment="Top" Width="335" FontSize="36"/>
+        <ListBox Name="ListMano" Visibility="Hidden" HorizontalAlignment="Left" Height="644" Margin="10,115,0,0" VerticalAlignment="Top" Width="335"/>
+        <ListBox Name="ListTablero" Visibility="Hidden" HorizontalAlignment="Left" Height="644" Margin="345,110,0,0" VerticalAlignment="Top" Width="335"/>
+        <Label Name="LabelTablero" Content="Tablero" Visibility="Hidden" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="70" Margin="345,40,0,0" VerticalAlignment="Top" Width="335" FontSize="36"/>
+        <Label Name="LabelInstrucciones" Visibility="Hidden" Content="Ingrese el numero &#xD;&#xA;de carta &#xD;&#xA;que desee jugar" HorizontalAlignment="Center" Height="220" Margin="850,115,82,434" Width="340" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+        <TextBox Name="CartaAJugar" HorizontalAlignment="Left" Height="195" Margin="890,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="225" TextChanged="TextBox_TextChanged"/>
+        <Button Name="BotonJugarCarta" Visibility="Hidden" Content="Jugar Carta" HorizontalAlignment="Left" Height="164" Margin="775,590,0,0" VerticalAlignment="Top" Width="170" FontSize="20" Click="Button_Click"/>
+        <Button Name="BotonMenu" Visibility="Hidden" Content="Volver al menú" HorizontalAlignment="Left" Height="164" Margin="1075,590,0,0" VerticalAlignment="Top" Width="170" FontSize="20" Click="Button_Click_1"/>
+        <Button Name="BotonEnorme" Content="Jugar Cartas" HorizontalAlignment="Left" Height="690" Margin="70,40,0,0" VerticalAlignment="Top" Width="1120" FontSize="108" Click="Button_Click_2"/>
+
+    </Grid>
+</Window>

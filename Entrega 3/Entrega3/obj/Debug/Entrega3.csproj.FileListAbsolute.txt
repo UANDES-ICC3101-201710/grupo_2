@@ -1,0 +1,20 @@
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\bin\Debug\Entrega3.exe.config
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\bin\Debug\Entrega3.exe
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\bin\Debug\Entrega3.pdb
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\Entrega3.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\MainWindow.g.cs
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\Tablero.g.cs
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\App.g.cs
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\Entrega3_MarkupCompile.cache
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\Entrega3_MarkupCompile.lref
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\MainWindow.baml
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\Tablero.baml
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\Entrega3.g.resources
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\Entrega3.Properties.Resources.resources
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\Entrega3.csproj.GenerateResource.Cache
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\Entrega3.exe
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\Entrega3.pdb
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\VentanaJugarCarta.g.cs
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\VentanaJugarCarta.baml
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\Ventana Atacar.g.cs
+C:\Users\Lucas\Documents\GitHub\grupo_2\Entrega 3\Entrega3\obj\Debug\Ventana Atacar.baml
