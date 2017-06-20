@@ -168,7 +168,7 @@ namespace ConsoleApp1
                         Console.WriteLine(Jugador1.nombre + " tienes " + manaTurno + " puntos de mana.");
                         Console.WriteLine("¿Que desea hacer?");
                         Console.WriteLine("(1) Jugar una carta de la mano");
-                        if (posiblesAtacantes1.Count >= 1 || Jugador2.arma == dagger || Jugador1.damage > 0)
+                        if (posiblesAtacantes1.Count >= 1 || Jugador1.arma.nombre == "dagger" || Jugador1.damage > 0)
                         {
                             Console.WriteLine("(2) Atacar");
                         }
@@ -258,6 +258,14 @@ namespace ConsoleApp1
                                             Console.WriteLine("Juego terminado gano: " + Jugador1.nombre);
                                             condicionJuego = false;
                                         }
+                                        if (Jugador1.arma == dagger)
+                                        {
+                                            dagger.vida -= 1;
+                                            if (dagger.vida == 0)
+                                            {
+                                                Jugador1.arma = pichon;
+                                            }
+                                        }
                                     }
                                     else if (target == 2)
                                     {
@@ -274,6 +282,14 @@ namespace ConsoleApp1
                                         {
                                             Console.WriteLine("Juego terminado gano: " + Jugador2.nombre);
                                             condicionJuego = false;
+                                        }
+                                        if (Jugador1.arma == dagger)
+                                        {
+                                            dagger.vida -= 1;
+                                            if (dagger.vida == 0)
+                                            {
+                                                Jugador1.arma = pichon;
+                                            }
                                         }
                                         if (Jugador2.tablero[numeroDeTargetInt1].vida <= 0)
                                         {
@@ -343,6 +359,7 @@ namespace ConsoleApp1
                             {
                                 Jugador1.UsarPoder(Jugador1, Jugador2, reclutaManoDePlata, listaCartasShaman, dagger);
                                 manaTurno -= 2;
+                                Jugador1.arma = dagger;
                                 condicionPoder = false;
                                 if (Jugador2.vida <= 0)
                                 {
@@ -417,7 +434,7 @@ namespace ConsoleApp1
                         Console.WriteLine("¿Que desea hacer?");
                         Console.WriteLine("(1) Jugar una carta de la mano");
 
-                        if (posiblesAtacantes1.Count >= 1 || Jugador2.arma == dagger || Jugador2.damage > 0 )
+                        if (posiblesAtacantes1.Count >= 1 || Jugador2.arma.nombre == "dagger" || Jugador2.damage > 0 )
                         {
                             Console.WriteLine("(2) Atacar");
                         }
@@ -502,6 +519,14 @@ namespace ConsoleApp1
                                     {
                                         Jugador1.vida -= Jugador2.arma.ataque;
                                         Jugador2.arma.vida -= 1;
+                                        if (Jugador2.arma == dagger)
+                                        {
+                                            dagger.vida -= 1;
+                                            if (dagger.vida == 0)
+                                            {
+                                                Jugador2.arma = pichon;
+                                            }
+                                        }
                                         if (Jugador1.vida <= 0)
                                         {
                                             Console.WriteLine("Juego terminado gano: " + Jugador2.nombre);
@@ -588,6 +613,7 @@ namespace ConsoleApp1
                                 Jugador2.UsarPoder(Jugador2, Jugador1, reclutaManoDePlata,listaCartasShaman, dagger);
                                 manaTurno -= 2;
                                 condicionPoder = false;
+                                Jugador2.arma = dagger;
                                 if (Jugador1.vida <= 0)
                                 {
                                     Console.WriteLine("Juego terminado gano: " + Jugador2.nombre);
