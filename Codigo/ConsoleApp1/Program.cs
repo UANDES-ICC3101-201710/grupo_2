@@ -11,8 +11,11 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
+            List<Cartas> listaCartasShaman = new List<Cartas>();
             List<Cartas> listaCartas = new List<Cartas>();
-            Cartas wisp = new Cartas(0, 1, 1, "wisp");
+            Cartas pichon = new Cartas(0, 0, 10000000, "pichon");
+            Cartas dagger = new Cartas(0, 1, 2, "Dagger");
+            Cartas wisp = new Cartas(0, 1, 1, "Wisp");
             Cartas murlocRaider = new Cartas(1, 1, 2, "Murloc Raider");
             Cartas bloodfenRaptor = new Cartas(2, 3, 2, "Bloodfen Raptor");
             Cartas riverCrocolisk = new Cartas(2, 2, 3, "River CrocoLisk");
@@ -24,6 +27,14 @@ namespace ConsoleApp1
             Cartas coreHound = new Cartas(7, 9, 5, "Core Hound");
             Cartas theCoin = new Cartas(0, 0, 0, "the coin");
             Cartas reclutaManoDePlata = new Cartas(0, 1, 1, "Esbirro de Plata");
+            Cartas healingTotem = new Cartas(0, 0, 2, "Healing Totem");
+            Cartas searingTotem = new Cartas(0, 1, 1, "Searing Totem");
+            Cartas stoneclawTotem = new Cartas(0, 0, 2, "StoneClaw Totem");
+            Cartas wrathOfAirTotem = new Cartas(0, 0, 2, "Wrath Of Air Totem");
+            listaCartasShaman.Add(healingTotem);
+            listaCartasShaman.Add(searingTotem);
+            listaCartasShaman.Add(stoneclawTotem);
+            listaCartasShaman.Add(wrathOfAirTotem);
             listaCartas.Add(wisp);
             listaCartas.Add(wisp);
             listaCartas.Add(wisp);
@@ -64,7 +75,7 @@ namespace ConsoleApp1
 
             Console.WriteLine(name1 + ", ¿Que heroe quieres ser?");
             string heroe1 = Console.ReadLine();
-            while (heroe1 != "Warrior" && heroe1 != "warrior" && heroe1 != "Hunter" && heroe1 != "hunter" && heroe1 != "Druid" && heroe1 != "druid" && heroe1 != "Paladin" && heroe1 != "paladin")
+            while (heroe1 != "Warrior" && heroe1 != "rogue" && heroe1 != "Hunter" && heroe1 != "hunter" && heroe1 != "Druid" && heroe1 != "druid" && heroe1 != "shaman" && heroe1 != "paladin")
             {
                 Console.WriteLine("Por favor ingrese un heroe valido");
                 heroe1 = Console.ReadLine();
@@ -92,10 +103,10 @@ namespace ConsoleApp1
 
             //Damages
             int damage1 = 0;
-            int damage2 = 1;
+            int damage2 = 0;
 
-            Jugador Jugador1 = new Jugador(0, 30, 0, Mano1, Mazo1, name1, TableroJugador1, heroe1, damage1);
-            Jugador Jugador2 = new Jugador(0, 30, 0, Mano2, Mazo2, name2, TableroJugador2, heroe2, damage2);
+            Jugador Jugador1 = new Jugador(0, 30, 0, Mano1, Mazo1, name1, TableroJugador1, heroe1, damage1, pichon);
+            Jugador Jugador2 = new Jugador(0, 30, 0, Mano2, Mazo2, name2, TableroJugador2, heroe2, damage2, pichon);
             Console.WriteLine("Comienza el juego");
             bool condicionJuego = true;
             Random rmd = new Random();
@@ -157,7 +168,7 @@ namespace ConsoleApp1
                         Console.WriteLine(Jugador1.nombre + " tienes " + manaTurno + " puntos de mana.");
                         Console.WriteLine("¿Que desea hacer?");
                         Console.WriteLine("(1) Jugar una carta de la mano");
-                        if (posiblesAtacantes1.Count >= 1)
+                        if (posiblesAtacantes1.Count >= 1 || Jugador2.arma == dagger || Jugador1.damage > 0)
                         {
                             Console.WriteLine("(2) Atacar");
                         }
@@ -214,21 +225,68 @@ namespace ConsoleApp1
                                 }
                             }
                         }
-                        else if (decision1 == "2") //Atacar con una creatura
+                        else if (decision1 == "2") //Atacar con una creatura o Heroe
                         {
                             for (int i = 0; i < posiblesAtacantes1.Count; i++)
                             {
                                 Console.WriteLine("[" + i + "]" + posiblesAtacantes1[i].nombre + "||" + " vida: " + "[" + posiblesAtacantes1[i].vida + "]" + " ataque: " + "[" + posiblesAtacantes1[i].ataque + "]");
                             }
                             decision1 = "0";
+                            Console.WriteLine("[10]" + "[" + Jugador1.nombre + "]" + "[" + Jugador1.arma.ataque + Jugador1.damage + "]");
                             while (decision1 == "0")
                             {
-                                Console.WriteLine("Elija el numero de carta que desee que ataque, tipe 11 para volver al menú.");
+                                Console.WriteLine("Elija el numero con que desee que ataque, tipe 11 para volver al menú.");
                                 string cartaElegidaString1 = Console.ReadLine();
                                 int cartaElegidaInt1 = Int32.Parse(cartaElegidaString1); // Hasta aca se tiene la carta que va a atacar, falta decidir a quien se va a atacar
                                 if (cartaElegidaInt1 == 11)
                                 {
                                     decision1 = "2";
+                                }
+                                else if (cartaElegidaInt1 == 10)
+                                {
+                                    Console.WriteLine("¿A quien desea a atacar?"); // primero vemos a quien se ataca, si se ataca a carta o a Jugador
+                                    Console.WriteLine("(1) Jugador oponente");
+                                    Console.WriteLine("(2) Alguna carta del oponente");
+                                    string target1 = Console.ReadLine();
+                                    int target = Int32.Parse(target1);
+                                    if (target == 1)
+                                    {
+                                        Jugador2.vida -= Jugador2.arma.ataque;
+                                        Jugador1.arma.vida -= 1;
+                                        if (Jugador2.vida <= 0)
+                                        {
+                                            Console.WriteLine("Juego terminado gano: " + Jugador1.nombre);
+                                            condicionJuego = false;
+                                        }
+                                    }
+                                    else if (target == 2)
+                                    {
+                                        Console.WriteLine("Indique a cual carta del oponente desea atacar");
+                                        for (int i = 0; i < Jugador2.tablero.Count; i++)
+                                        {
+                                            Console.WriteLine("[" + i + "]" + Jugador2.tablero[i].nombre + "|| vida: " + "[" + Jugador2.tablero[i].vida + "]" + " ataque: " + "[" + Jugador1.tablero[i].ataque + "]");
+                                        }
+                                        string numeroDeTarget1 = Console.ReadLine();
+                                        int numeroDeTargetInt1 = Int32.Parse(numeroDeTarget1);
+                                        Jugador2.tablero[numeroDeTargetInt1].vida -= Jugador1.damage + Jugador1.arma.ataque;
+                                        Jugador1.vida -= Jugador2.tablero[numeroDeTargetInt1].ataque;
+                                        if (Jugador1.vida <= 0)
+                                        {
+                                            Console.WriteLine("Juego terminado gano: " + Jugador2.nombre);
+                                            condicionJuego = false;
+                                        }
+                                        if (Jugador2.tablero[numeroDeTargetInt1].vida <= 0)
+                                        {
+                                            Jugador1.tablero.Remove(Jugador1.tablero[numeroDeTargetInt1]);
+                                            Console.WriteLine(Jugador1.tablero[numeroDeTargetInt1].nombre + "ha muerto");
+                                        }
+                                        if (Jugador2.tablero[cartaElegidaInt1].vida <= 0)
+                                        {
+                                            Jugador2.tablero.Remove(Jugador2.tablero[cartaElegidaInt1]);
+                                            Console.WriteLine(Jugador2.tablero[numeroDeTargetInt1].nombre + "ha muerto");
+                                        }
+
+                                    }
                                 }
                                 else
                                 {
@@ -254,20 +312,18 @@ namespace ConsoleApp1
                                         {
                                             Console.WriteLine("[" + i + "]" + Jugador2.tablero[i].nombre + "|| vida: " + "[" + Jugador2.tablero[i].vida + "]" + " ataque: " + "[" + Jugador2.tablero[i].ataque + "]");
                                         }
-
-
                                         string numeroDeTarget1 = Console.ReadLine();
                                         int numeroDeTargetInt1 = Int32.Parse(numeroDeTarget1);
                                         Jugador1.AtacarCarta(posiblesAtacantes1, cartaElegidaInt1, Jugador2.tablero, numeroDeTargetInt1);
-                                        if (Jugador2.tablero[numeroDeTargetInt1].vida <= 0)
+                                        if (Jugador1.tablero[numeroDeTargetInt1].vida <= 0)
                                         {
-                                            Jugador2.tablero.Remove(Jugador2.tablero[numeroDeTargetInt1]);
-                                            Console.WriteLine(Jugador2.tablero[numeroDeTargetInt1].nombre + "ha muerto");
-                                        }
-                                        if (Jugador1.tablero[cartaElegidaInt1].vida <= 0)
-                                        {
-                                            Jugador1.tablero.Remove(Jugador1.tablero[cartaElegidaInt1]);
+                                            Jugador1.tablero.Remove(Jugador1.tablero[numeroDeTargetInt1]);
                                             Console.WriteLine(Jugador1.tablero[numeroDeTargetInt1].nombre + "ha muerto");
+                                        }
+                                        if (Jugador2.tablero[cartaElegidaInt1].vida <= 0)
+                                        {
+                                            Jugador2.tablero.Remove(Jugador2.tablero[cartaElegidaInt1]);
+                                            Console.WriteLine(Jugador2.tablero[numeroDeTargetInt1].nombre + "ha muerto");
                                         }
                                     }
                                     decision1 = "2";
@@ -285,7 +341,7 @@ namespace ConsoleApp1
                             }
                             else
                             {
-                                Jugador1.UsarPoder(Jugador1, Jugador2, reclutaManoDePlata);
+                                Jugador1.UsarPoder(Jugador1, Jugador2, reclutaManoDePlata, listaCartasShaman, dagger);
                                 manaTurno -= 2;
                                 condicionPoder = false;
                                 if (Jugador2.vida <= 0)
@@ -361,7 +417,7 @@ namespace ConsoleApp1
                         Console.WriteLine("¿Que desea hacer?");
                         Console.WriteLine("(1) Jugar una carta de la mano");
 
-                        if (posiblesAtacantes1.Count >= 1)
+                        if (posiblesAtacantes1.Count >= 1 || Jugador2.arma == dagger || Jugador2.damage > 0 )
                         {
                             Console.WriteLine("(2) Atacar");
                         }
@@ -418,21 +474,63 @@ namespace ConsoleApp1
                                 }
                             }
                         }
-                        else if (decision1 == "2") //Atacar con una creatura
+                        else if (decision1 == "2") //Atacar con una creatura o Heroe
                         {
                             for (int i = 0; i < posiblesAtacantes1.Count; i++)
                             {
                                 Console.WriteLine("[" + i + "]" + posiblesAtacantes1[i].nombre + "||" + " vida: " + "[" + posiblesAtacantes1[i].vida + "]" + " ataque: " + "[" + posiblesAtacantes1[i].ataque + "]");
                             }
                             decision1 = "0";
+                            Console.WriteLine("[10]" + "[" + Jugador2.nombre + "]" + "[" + Jugador2.arma.ataque + Jugador2.damage + "]");
                             while (decision1 == "0")
                             {
-                                Console.WriteLine("Elija el numero de carta que desee que ataque, tipe 11 para volver al menú.");
+                                Console.WriteLine("Elija el numero con que desee que ataque, tipe 11 para volver al menú.");
                                 string cartaElegidaString1 = Console.ReadLine();
                                 int cartaElegidaInt1 = Int32.Parse(cartaElegidaString1); // Hasta aca se tiene la carta que va a atacar, falta decidir a quien se va a atacar
                                 if (cartaElegidaInt1 == 11)
                                 {
                                     decision1 = "2";
+                                }
+                                else if (cartaElegidaInt1 == 10)
+                                {
+                                    Console.WriteLine("¿A quien desea a atacar?"); // primero vemos a quien se ataca, si se ataca a carta o a Jugador
+                                    Console.WriteLine("(1) Jugador oponente");
+                                    Console.WriteLine("(2) Alguna carta del oponente");
+                                    string target1 = Console.ReadLine();
+                                    int target = Int32.Parse(target1);
+                                    if (target == 1)
+                                    {
+                                        Jugador1.vida -= Jugador2.arma.ataque;
+                                        Jugador2.arma.vida -= 1;
+                                        if (Jugador1.vida <= 0)
+                                        {
+                                            Console.WriteLine("Juego terminado gano: " + Jugador2.nombre);
+                                            condicionJuego = false;
+                                        }
+                                    }
+                                    else if (target == 2)
+                                    {
+                                        Console.WriteLine("Indique a cual carta del oponente desea atacar");
+                                        for (int i = 0; i < Jugador1.tablero.Count; i++)
+                                        {
+                                            Console.WriteLine("[" + i + "]" + Jugador1.tablero[i].nombre + "|| vida: " + "[" + Jugador1.tablero[i].vida + "]" + " ataque: " + "[" + Jugador1.tablero[i].ataque + "]");
+                                        }
+                                        string numeroDeTarget1 = Console.ReadLine();
+                                        int numeroDeTargetInt1 = Int32.Parse(numeroDeTarget1);
+                                        Jugador1.tablero[numeroDeTargetInt1].vida -= Jugador2.damage + Jugador2.arma.ataque;
+                                        Jugador2.vida -= Jugador1.tablero[numeroDeTargetInt1].ataque;
+                                        if (Jugador1.tablero[numeroDeTargetInt1].vida <= 0)
+                                        {
+                                            Jugador1.tablero.Remove(Jugador1.tablero[numeroDeTargetInt1]);
+                                            Console.WriteLine(Jugador1.tablero[numeroDeTargetInt1].nombre + "ha muerto");
+                                        }
+                                        if (Jugador2.tablero[cartaElegidaInt1].vida <= 0)
+                                        {
+                                            Jugador2.tablero.Remove(Jugador2.tablero[cartaElegidaInt1]);
+                                            Console.WriteLine(Jugador2.tablero[numeroDeTargetInt1].nombre + "ha muerto");
+                                        }
+
+                                    }
                                 }
                                 else
                                 {
@@ -487,7 +585,7 @@ namespace ConsoleApp1
                             }
                             else
                             {
-                                Jugador2.UsarPoder(Jugador2, Jugador1, reclutaManoDePlata);
+                                Jugador2.UsarPoder(Jugador2, Jugador1, reclutaManoDePlata,listaCartasShaman, dagger);
                                 manaTurno -= 2;
                                 condicionPoder = false;
                                 if (Jugador1.vida <= 0)

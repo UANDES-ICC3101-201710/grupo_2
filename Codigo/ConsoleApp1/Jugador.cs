@@ -11,13 +11,15 @@ namespace ConsoleApp1
         public int vida;
         public int mana;
         public List<Cartas> mano;
+        public List<Cartas> listaCartasShaman;
         public List<Cartas> mazo;
         public string nombre;
         public List<Cartas> tablero;
         internal int damage;
         internal int armadura;
         public string heroe;
-        public Jugador(int armadura, int vida, int mana, List<Cartas> mano, List<Cartas> mazo, string nombre, List<Cartas> tablero, string heroe, int damage)
+        public Cartas arma;
+        public Jugador(int armadura, int vida, int mana, List<Cartas> mano, List<Cartas> mazo, string nombre, List<Cartas> tablero, string heroe, int damage, Cartas arma)
         {
             this.damage = damage;
             this.vida = vida;
@@ -28,6 +30,7 @@ namespace ConsoleApp1
             this.tablero = tablero;
             this.heroe = heroe;
             this.armadura = armadura;
+            this.arma = arma;
         }
         public void ManaGrowth()
         {
@@ -58,7 +61,7 @@ namespace ConsoleApp1
         {
             jugador.vida -= posiblesAtacantes[cartaElegida].ataque;
         }
-        public void UsarPoder(Jugador JugadorPoder, Jugador JugadorOponente, Cartas carta)
+        public void UsarPoder(Jugador JugadorPoder, Jugador JugadorOponente, Cartas carta, List<Cartas> lista, Cartas arma)
         {
             if (JugadorPoder.heroe == "Warrior" || JugadorPoder.heroe == "warrior")
             {
@@ -73,7 +76,6 @@ namespace ConsoleApp1
                 JugadorPoder.damage += 1;
                 JugadorPoder.armadura += 1;
             }
- 
             else if (JugadorPoder.heroe == "Mage" || JugadorPoder.heroe == "mage")
             { 
                 JugadorOponente.vida -= 1;
@@ -88,10 +90,14 @@ namespace ConsoleApp1
             }
             else if (JugadorPoder.heroe == "Rogue" || JugadorPoder.heroe == "rogue")
             {
-                JugadorPoder.damage += 1;
+                JugadorPoder.arma = arma;
+                Console.WriteLine("Se equipo arma");
             }
             else if (JugadorPoder.heroe == "Shaman" || JugadorPoder.heroe == "shaman")
             {
+                Random rnd = new Random();
+                int largoLista = rnd.Next(0,4);
+                JugadorPoder.tablero.Add(lista[largoLista]);
             }
             else if (JugadorPoder.heroe == "Warlock" || JugadorPoder.heroe == "warlock")
             {
