@@ -1,0 +1,86 @@
+﻿<Window x:Class="Entrega4WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Entrega4WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="768" Width="1024">
+    <Window.Background>
+        <ImageBrush ImageSource="image/wpp.jpg"/>
+    </Window.Background>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="Transparent">
+                            <ContentPresenter/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontStyle" Value="Normal"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <Label Visibility="Visible" Name="TituloP1" Content="Hearthstone" HorizontalAlignment="Left" Height="100" Margin="230,32,0,0" VerticalAlignment="Top" Width="542" FontSize="48" Background="{x:Null}" FontFamily="Wide Latin" RenderTransformOrigin="0.296,0.87"/>
+        <Label Visibility="Visible" Name ="Jugador1P1" Content="Jugador 1" HorizontalAlignment="Left" Height="80" Margin="10,110,0,0" VerticalAlignment="Top" Width="305" FontSize="48">
+        </Label>
+        <Label Visibility="Visible" Name ="Jugador2P1" Content="Jugador 2" HorizontalAlignment="Left" Height="80" Margin="770,110,0,0" VerticalAlignment="Top" Width="236" FontSize="48"/>
+        <Label Visibility="Visible" Name="LabelIngresarNombreP1" Content="Ingresen sus nombres" HorizontalAlignment="Left" Height="60" Margin="355,235,0,0" VerticalAlignment="Top" Width="320" FontSize="32"/>
+        <Label Visibility="Visible" Name="LabelIngresarHeroesP1" Content="Ingresen sus heroes" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="75" Margin="355,345,0,0" VerticalAlignment="Top" Width="320" FontSize="32"/>
+        <TextBox Visibility="Visible" Name="TextBoxIngresarNombresJ1P1" HorizontalAlignment="Left" Height="60" Margin="10,235,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="280" FontSize="32"/>
+        <TextBox Visibility="Visible" VerticalContentAlignment="Center" Name="TextBoxIngresarHeroesJ1P1" HorizontalAlignment="Left" Height="75" Margin="10,345,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="280" FontSize="32"/>
+        <TextBox Visibility="Visible" VerticalContentAlignment="Center" Name="TextBoxIngresarNombresJ2P1" HorizontalAlignment="Left" Height="60" Margin="738,235,-2,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="280" FontSize="32"/>
+        <TextBox Visibility="Visible" VerticalContentAlignment="Center" Name="TextBoxIngresarHeroesJ2P1" HorizontalAlignment="Left" Height="75" Margin="736,345,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="280" FontSize="32"/>
+        <Button Visibility="Visible" Name="BotonCargarPartidaP1" Content="Cargar Partida" HorizontalAlignment="Left" Height="45" Margin="110,570,0,0" VerticalAlignment="Top" Width="226" FontSize="32" RenderTransformOrigin="0.735,2.022" FontWeight="Bold" FontStyle="Italic" Foreground="#FFF1F1F1"/>
+        <Label Visibility="Visible" Name="LabelHeroeMalJ1P1" Content="Ingrese bien su heroe" HorizontalAlignment="Left" Height="55" Margin="5,420,0,0" VerticalAlignment="Top" Width="280" FontStyle="Italic" FontSize="22"/>
+        <Label Visibility="Visible" Name="LabelHeroeMalJ2P1" Content="Ingrese bien su heroe" HorizontalAlignment="Left" Height="55" Margin="736,420,0,0" VerticalAlignment="Top" Width="280" FontSize="22" FontStyle="Italic"/>
+        <Label Visibility="Hidden" Name="TurnoDeP2" Content="TurnoDeP2" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="220" FontSize="22" FontWeight="Bold"/>
+        <Label Visibility="Hidden" Name="VidaP2" Content="VidaP2" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="55" Margin="220,0,0,0" VerticalAlignment="Top" Width="220" FontSize="22" FontWeight="Bold"/>
+        <Label Visibility="Hidden" Name="ManaP2" Content="ManaP2" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="55" Margin="445,0,0,0" VerticalAlignment="Top" Width="220" FontSize="22" FontWeight="Bold"/>
+        <Button Visibility="Hidden" Name="UsarPoderP2" Content="Usar Poder" HorizontalAlignment="Left" Height="55" Margin="785,475,0,0" VerticalAlignment="Top" Width="180" FontSize="30" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Visibility="Hidden" Name="LeyendaCartasP2" Content="NombreCarta | Vida | Ataque | Costo" HorizontalAlignment="Left" Height="55" Margin="0,55,0,0" VerticalAlignment="Top" Width="400" FontSize="22" FontStyle="Italic"/>
+        <Label Visibility="Hidden" Name="LabelMostrarManoP2" Content="Mano" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="55" Margin="5,115,0,0" VerticalAlignment="Top" Width="215" FontSize="22"/>
+        <Label Visibility="Hidden" Name="LabelMostrarTuTableroP2" Content="Tu Tablero" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="55" Margin="225,115,0,0" VerticalAlignment="Top" Width="215" FontSize="22"/>
+        <Label Visibility="Hidden" Name="LabelMostrarTableroRivalP2" Content="Tablero Rival" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="55" Margin="445,115,0,0" VerticalAlignment="Top" Width="215" FontSize="22"/>
+        <ListBox Visibility="Hidden" Name="ListBoxManoP2" HorizontalAlignment="Left" Height="305" Margin="5,170,0,0" VerticalAlignment="Top" Width="220"/>
+        <ListBox Visibility="Hidden" Name="ListBoxTuTableroP2" HorizontalAlignment="Left" Height="305" Margin="230,170,0,0" VerticalAlignment="Top" Width="210"/>
+        <ListBox Visibility="Hidden" Name="ListBoxTableroRivalP2" HorizontalAlignment="Left" Height="305" Margin="445,170,0,0" VerticalAlignment="Top" Width="215"/>
+        <Label Visibility="Hidden" Name="LabelMenuAtacarP2" Content="Menu Atacar Cartas" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="55" Margin="665,60,0,0" VerticalAlignment="Top" Width="331" FontSize="22" FontWeight="Bold"/>
+        <Label Visibility="Hidden" Name="LabelInstrucciones1P2" Content="Ingrese numero de minion que desea que ataque:" HorizontalAlignment="Left" Height="30" Margin="663,115,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="343" FontSize="15"/>
+        <TextBox Visibility="Hidden" Name="CartaAtacanteP2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="75" Margin="770,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="115" FontSize="36"/>
+        <Label Visibility="Hidden" Name="LabelInstrucciones2P2" Content="Ingrese numero de minion al que desea atacar:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="30" Margin="663,235,0,0" VerticalAlignment="Top" Width="341" FontSize="15"/>
+        <TextBox Visibility="Hidden" Name="CartaAtacadaP2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="75" Margin="770,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="115" FontSize="36"/>
+        <Label Visibility="Hidden" Name="LabelMenuJugarCartaP2" Content="Menu Jugar Carta" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="55" Margin="5,475,0,0" VerticalAlignment="Top" Width="331" FontSize="22" FontWeight="Bold"/>
+        <Button Visibility="Hidden" Name="BotonAtacarP2" Content="Atacar" HorizontalAlignment="Left" Height="40" Margin="785,365,0,0" VerticalAlignment="Top" Width="87" FontSize="24" Click="BotonAtacarP2_Click" RenderTransformOrigin="1.493,0.388" FontWeight="Bold" FontStyle="Italic" Foreground="White"/>
+        <Label Visibility="Hidden" Name="LabelInstrucciones3P2" Content= "Ingrese bien los numeros de las cartas" HorizontalAlignment="Left" Height="37" Margin="700,410,0,0" VerticalAlignment="Top" Width="280" FontStyle="Italic" FontSize="16"/>
+        <Label Visibility="Hidden" Name="LabelInstrucciones4P2" Content="Ingrese numero de carta que desea jugar:" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="30" Margin="10,525,0,0" VerticalAlignment="Top" Width="341" FontSize="15"/>
+        <TextBox Visibility="Hidden" Name="CartaAJugarP2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="75" Margin="110,570,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="115" FontSize="36"/>
+        <Button Visibility="Hidden" Name="BotonJugarCartaP2" Content="Jugar Carta" HorizontalAlignment="Left" Height="45" Margin="88,653,0,0" VerticalAlignment="Top" Width="152" FontSize="26" Click="BotonJugarCartaP2_Click" RenderTransformOrigin="1.062,0.711" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Visibility="Hidden" Name="LabelInstrucciones5P2" Content= "Ingrese bien el numero de la carta" HorizontalAlignment="Left" Height="37" Margin="35,695,0,0" VerticalAlignment="Top" Width="280" FontStyle="Italic" FontSize="16"/>
+        <Button Visibility="Hidden" Name="BotonGuardarYSalirP2" Content="Guardar y Salir" HorizontalAlignment="Left" Height="77" Margin="755,543,0,0" VerticalAlignment="Top" Width="225" FontSize="30" Click="BotonGuardarYSalirP2_Click" RenderTransformOrigin="0.24,0.461" FontWeight="Bold" FontStyle="Italic"/>
+        <Button Visibility="Hidden" Name="BotonTerminarTurnoP2" Content="Terminar Turno" HorizontalAlignment="Left" Height="56" Margin="755,625,0,0" VerticalAlignment="Top" Width="233" FontSize="30" Click="BotonTerminarTurnoP2_Click" FontWeight="Bold" FontStyle="Italic" RenderTransformOrigin="0.013,0.268"/>
+        <Button Visibility="Visible" Name ="BotonComenzarP1" Content="Comenzar" HorizontalAlignment="Left" Height="49" Margin="760,571,0,0" VerticalAlignment="Top" Width="152" Click="BotonComenzarP1_Click" FontSize="32" Cursor="Hand" Background="{x:Null}" RenderTransformOrigin="0.747,0.52" FontWeight="Bold" FontStyle="Italic" Foreground="#FFE2E2EA">
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+        </Button>
+        <Label Visibility="Hidden" Name="LabelInstrucciones6P2" Content="No tienes mana suficiente" HorizontalAlignment="Left" Height="37" Margin="700,695,0,0" VerticalAlignment="Top" Width="255" FontStyle="Italic" FontSize="16"/>
+        <Label Visibility="Hidden" Name="LabelAtacarHeroeP2" Content="Menu Atacar Heroes" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="55" Margin="389,475,0,0" VerticalAlignment="Top" Width="331" FontSize="22" FontWeight="Bold"/>
+        <Label Visibility="Hidden" Name="LabelInstrucciones7P2" Content="Ingrese numero de minion que desea que ataque:" HorizontalAlignment="Left" Height="30" Margin="389,525,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="343" FontSize="15"/>
+        <TextBox Visibility="Hidden" Name="CartaAtacanteHeroesP2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="75" Margin="495,570,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="115" FontSize="36" RenderTransformOrigin="0.435,0.533"/>
+        <Button Visibility="Hidden" Name="BotonAtacarHeroeP2" Content="Atacar" HorizontalAlignment="Left" Height="45" Margin="505,653,0,0" VerticalAlignment="Top" Width="105" FontSize="30" Click="BotonJugarCartaP2_Click" RenderTransformOrigin="1.049,0.411" FontWeight="Bold" FontStyle="Italic" Foreground="White"/>
+        <Label Visibility="Hidden" Name="LabelInstrucciones8P2" Content= "Ingrese bien el numero de la carta" HorizontalAlignment="Left" Height="37" Margin="415,695,0,0" VerticalAlignment="Top" Width="280" FontStyle="Italic" FontSize="16"/>
+        <Label Visibility="Hidden" Name="VidaRivalP2" Content="VidaRivalP2" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="55" Margin="720,0,0,0" VerticalAlignment="Top" Width="220" FontSize="22" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
