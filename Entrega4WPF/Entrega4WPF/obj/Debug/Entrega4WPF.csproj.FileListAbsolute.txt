@@ -1,0 +1,56 @@
+c:\users\lucas\documents\visual studio 2017\Projects\Entrega4WPF\Entrega4WPF\bin\Debug\Entrega4WPF.exe.config
+c:\users\lucas\documents\visual studio 2017\Projects\Entrega4WPF\Entrega4WPF\bin\Debug\Entrega4WPF.exe
+c:\users\lucas\documents\visual studio 2017\Projects\Entrega4WPF\Entrega4WPF\bin\Debug\Entrega4WPF.pdb
+c:\users\lucas\documents\visual studio 2017\Projects\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.csprojResolveAssemblyReference.cache
+c:\users\lucas\documents\visual studio 2017\Projects\Entrega4WPF\Entrega4WPF\obj\Debug\MainWindow.g.cs
+c:\users\lucas\documents\visual studio 2017\Projects\Entrega4WPF\Entrega4WPF\obj\Debug\App.g.cs
+c:\users\lucas\documents\visual studio 2017\Projects\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF_MarkupCompile.cache
+c:\users\lucas\documents\visual studio 2017\Projects\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF_MarkupCompile.lref
+c:\users\lucas\documents\visual studio 2017\Projects\Entrega4WPF\Entrega4WPF\obj\Debug\MainWindow.baml
+c:\users\lucas\documents\visual studio 2017\Projects\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.g.resources
+c:\users\lucas\documents\visual studio 2017\Projects\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.Properties.Resources.resources
+c:\users\lucas\documents\visual studio 2017\Projects\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.csproj.GenerateResource.Cache
+c:\users\lucas\documents\visual studio 2017\Projects\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.exe
+c:\users\lucas\documents\visual studio 2017\Projects\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.pdb
+C:\Users\javie\OneDrive\Documentos\Entrega4WPF\Entrega4WPF\bin\Debug\Entrega4WPF.exe.config
+C:\Users\javie\OneDrive\Documentos\Entrega4WPF\Entrega4WPF\bin\Debug\Entrega4WPF.exe
+C:\Users\javie\OneDrive\Documentos\Entrega4WPF\Entrega4WPF\bin\Debug\Entrega4WPF.pdb
+C:\Users\javie\OneDrive\Documentos\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.csprojResolveAssemblyReference.cache
+C:\Users\javie\OneDrive\Documentos\Entrega4WPF\Entrega4WPF\obj\Debug\MainWindow.g.cs
+C:\Users\javie\OneDrive\Documentos\Entrega4WPF\Entrega4WPF\obj\Debug\App.g.cs
+C:\Users\javie\OneDrive\Documentos\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF_MarkupCompile.cache
+C:\Users\javie\OneDrive\Documentos\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF_MarkupCompile.lref
+C:\Users\javie\OneDrive\Documentos\Entrega4WPF\Entrega4WPF\obj\Debug\MainWindow.baml
+C:\Users\javie\OneDrive\Documentos\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.g.resources
+C:\Users\javie\OneDrive\Documentos\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.Properties.Resources.resources
+C:\Users\javie\OneDrive\Documentos\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.csproj.GenerateResource.Cache
+C:\Users\javie\OneDrive\Documentos\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.exe
+C:\Users\javie\OneDrive\Documentos\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.pdb
+C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\bin\Debug\Entrega4WPF.exe.config
+C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\bin\Debug\Entrega4WPF.exe
+C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\bin\Debug\Entrega4WPF.pdb
+C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\obj\Debug\App.g.cs
+C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF_MarkupCompile.cache
+C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF_MarkupCompile.lref
+C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\obj\Debug\MainWindow.baml
+C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.g.resources
+C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.Properties.Resources.resources
+C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.csproj.GenerateResource.Cache
+C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.exe
+C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.pdb
+C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\bin\Debug\Entrega4WPF.exe.config
+C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\bin\Debug\Entrega4WPF.exe
+C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\bin\Debug\Entrega4WPF.pdb
+C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\App.g.cs
+C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF_MarkupCompile.cache
+C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF_MarkupCompile.lref
+C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\MainWindow.baml
+C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.g.resources
+C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.Properties.Resources.resources
+C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.csproj.GenerateResource.Cache
+C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.exe
+C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.pdb
