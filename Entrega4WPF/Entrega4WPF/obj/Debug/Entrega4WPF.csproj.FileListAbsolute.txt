@@ -40,17 +40,3 @@ C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\obj\Debug\Entre
 C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.csproj.GenerateResource.Cache
 C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.exe
 C:\Users\Lucas\Downloads\Entrega4WPF (2)\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.pdb
-C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\bin\Debug\Entrega4WPF.exe.config
-C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\bin\Debug\Entrega4WPF.exe
-C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\bin\Debug\Entrega4WPF.pdb
-C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.csprojResolveAssemblyReference.cache
-C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\MainWindow.g.cs
-C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\App.g.cs
-C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF_MarkupCompile.cache
-C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF_MarkupCompile.lref
-C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\MainWindow.baml
-C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.g.resources
-C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.Properties.Resources.resources
-C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.csproj.GenerateResource.Cache
-C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.exe
-C:\Users\Rodrigo\Desktop\Entrega4WPF\Entrega4WPF\obj\Debug\Entrega4WPF.pdb

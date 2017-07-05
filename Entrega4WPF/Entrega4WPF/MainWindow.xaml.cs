@@ -742,16 +742,21 @@ namespace Entrega4WPF
             CartaAtacadaP2.Visibility = System.Windows.Visibility.Visible;
             LabelMenuJugarCartaP2.Visibility = System.Windows.Visibility.Visible;
             BotonAtacarP2.Visibility = System.Windows.Visibility.Visible;
-            LabelInstrucciones3P2.Visibility = System.Windows.Visibility.Visible;
             LabelInstrucciones4P2.Visibility = System.Windows.Visibility.Visible;
             CartaAJugarP2.Visibility = System.Windows.Visibility.Visible;
             BotonJugarCartaP2.Visibility = System.Windows.Visibility.Visible;
-            LabelInstrucciones5P2.Visibility = System.Windows.Visibility.Visible;
             BotonGuardarYSalirP2.Visibility = System.Windows.Visibility.Visible;
             BotonTerminarTurnoP2.Visibility = System.Windows.Visibility.Visible;
+            LabelAtacarHeroeP2.Visibility = System.Windows.Visibility.Visible;
+            CartaAtacanteHeroesP2.Visibility = System.Windows.Visibility.Visible;
+            BotonAtacarHeroeP2.Visibility = System.Windows.Visibility.Visible;
+            LabelInstrucciones7P2.Visibility = System.Windows.Visibility.Visible;
+            VidaRivalP2.Visibility = System.Windows.Visibility.Visible;
             TurnoDeP2.Content = "Turno de " + ListaJugadores[turno].nombre;
             VidaP2.Content = "Vida: " + ListaJugadores[turno].vida;
             ManaP2.Content = "Mana: " + ListaJugadores[turno].manaTurno;
+            ListBoxManoP2.ItemsSource = ListaJugadores[turno].manoDisponible;
+            ListBoxTuTableroP2.ItemsSource = ListaJugadores[turno].tableroDisponible;
             ListBoxManoP2.ItemsSource = ListaJugadores[turno].manoDisponible;
             ListBoxTuTableroP2.ItemsSource = ListaJugadores[turno].tableroDisponible;
             if (turno == 1)
@@ -761,6 +766,17 @@ namespace Entrega4WPF
             else if (turno == 0)
             {
                 ListBoxTableroRivalP2.ItemsSource = ListaJugadores[turno + 1].tableroDisponible;
+            }
+
+            if (turno == 1)
+            {
+                VidaRivalP2.Content = null;
+                VidaRivalP2.Content = "Vida rival: " + ListaJugadores[turno - 1].vida;
+            }
+            else if (turno == 0)
+            {
+                VidaRivalP2.Content = null;
+                VidaRivalP2.Content = "Vida rival: " + ListaJugadores[turno + 1].vida;
             }
         }
 
